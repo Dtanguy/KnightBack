@@ -1,0 +1,14 @@
+[Unit]
+Description=KnightBack
+After=network.target
+
+[Service]
+ExecStart=/usr/local/bin/node /home/pi/KnightBack/app.js
+WorkingDirectory=/home/pi/KnightBack
+StandardOutput=inherit
+StandardError=inherit
+Restart=always
+User=pi
+
+[Install]
+WantedBy=multi-user.target
