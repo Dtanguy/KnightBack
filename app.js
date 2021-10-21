@@ -57,7 +57,7 @@ app.use(function (req, res, next) {
 });
 
 app.post('/login', function (req, res) {
-  console.log(req.body);
+  console.log('/login');
   if (req.body.pswrd.toString() == process.env.PSWRD.toString()) {
     var nt = crypto.randomBytes(16).toString('hex');
     token.push(nt);
@@ -98,8 +98,8 @@ function verify(tok) {
 }
 
 
-app.post("/getall", function (req, res) {
-  console.log(req);
+app.post('/getall', function (req, res) {
+  console.log('/getall');
   if (!verify(req.body.token)) {
     res.send({ 'error': 'Refused' });
     return;

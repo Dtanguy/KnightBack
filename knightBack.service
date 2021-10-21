@@ -3,12 +3,9 @@ Description=KnightBack
 After=network.target
 
 [Service]
-ExecStart=/usr/local/bin/node /home/pi/KnightBack/app.js
-WorkingDirectory=/home/pi/KnightBack
-StandardOutput=inherit
-StandardError=inherit
+ExecStart=/usr/bin/node /home/debian/knightBack/app.js
+WorkingDirectory=/home/debian/knightBack
 Restart=always
-User=pi
 
 [Install]
 WantedBy=multi-user.target
